@@ -25,11 +25,15 @@ class _FoodListState extends State<FoodList> {
         Container(
           alignment: Alignment.center,
           child: widget.foodList.length == 0
-              ? Align(
+              ? Container(
+                  height: 80,
                   alignment: Alignment.center,
                   child: Text(
-                    "Oops, You forgot to add an item  in this catergory!",
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    "No items found!",
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xffFF9800)),
                   ),
                 )
               : SizedBox(

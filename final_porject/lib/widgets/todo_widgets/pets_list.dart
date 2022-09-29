@@ -25,15 +25,15 @@ class _PetsListState extends State<PetsList> {
         Container(
           alignment: Alignment.center,
           child: widget.petsList.length == 0
-              ? Align(
+              ? Container(
+                  height: 80,
                   alignment: Alignment.center,
-                  child: Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    child: Text(
-                      "Oops, You forgot to add an item  in this catergory!",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                    ),
+                  child: Text(
+                    "No items found!",
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xffFF9800)),
                   ),
                 )
               : SizedBox(
